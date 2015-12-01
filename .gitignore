@@ -33,4 +33,5 @@
 *.key
 *.pdf
 
-
+#Notebook garbage. 
+*.ipynb_checkpoints
