@@ -1,0 +1,206 @@
+/* Color palette information:
+ *
+ * red   = #FF6766
+ * green = #97CE68
+ * blue  = #83D6DE
+ * grey  = #60646D
+ * tan   = #FFFFF7
+ * black = #383732
+ * purple = #ab75bd or #9966ff
+ *
+*/
+
+/* General Page Styles */
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10pt;
+}
+
+h1 {
+	font-size:14pt;
+}
+
+h2 {
+	font-size: 13pt;
+
+}
+
+p {
+	font-size: 10pt;
+}
+
+a {
+	color: #ab75bd ;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #383732;
+	text-decoration: none;
+}
+li {
+	margin: 0px;
+}
+/* Page centering */ 
+
+#wrap {
+	width: 800px;
+	margin:  auto;
+	}
+
+/* Major div styling */
+#header {
+	width: 800px;
+	height: auto;
+	background: #4b4b4b;
+	background-image: url("images/header_image_crop.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: center;
+	color: #FFFFFF;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: 0px;
+	padding-bottom: 10px;
+}
+
+
+#header h1{
+	font-family: 'Fira Sans', sans-serif;
+	font-variant: small-caps;
+	font-weight: 500;
+	font-size: 24pt;
+	padding: 10px 0 0px 7.5px;
+	margin: auto;
+	overflow: hidden;
+}
+#header img{
+	height: 50px;
+	align: right;
+}
+#navbar {
+	background-color: #60646D;
+	font: small "Lucida Grande", Arial, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	padding: 0.25em;
+
+}
+
+#navbar li{
+	margin-right: 0.25em; 
+	margin-left: 0em;
+	padding-right: 0.75em;
+	padding-left: 0.75em;
+	border-right: 1.5px solid #383732;
+	display:inline;
+	color: #383732;
+
+}
+
+#navbar li.current{
+	color: #FFFFF7;
+}
+
+#navbar li.last{
+	border-right: 0px;
+}
+#navbar a:hover{
+	color: #ab75bd;
+}
+#navbar a {
+	color: #383732;
+}
+
+
+
+#footer {
+	background-color: #60646D;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top: 5px solid #836D6F;
+}
+  
+#footer p{
+	text-size: 8pt;
+	margin: auto;
+	text-align: center;	
+	color: #383732;
+}
+
+#footer a {
+	color: #383732;
+}
+
+#footer a:hover {
+	color: #FF6766;
+}
+
+/* Content styles */
+#content {
+	background-image: url(images/ecoli_dna.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: center;
+	background-color: #FFFFFF;
+	padding: 10px 0 10px 0;
+	width: 800px;
+}
+
+#content p{
+	font: "Open Sans", Arial, sans-serif;
+	text-size: 12pt;
+	padding: 0 20px 0 20px;
+	text-align: justify;
+}
+
+#content h1{
+	font: "Open Sans", Arial, sans-serif;
+	padding: 0 0 0 7.5px;
+}
+
+#content h2{
+	margin: 0px 0 0px 7.5px;
+	color: #60646D;
+}
+#content hr{
+	margin: -10px 20px -5px 7.5px;
+	padding: -2px 7.5px;
+	border: 1px solid #ab75bd;
+}
+
+#content li{
+	padding: 0.75em 0 0 1.5em;
+	text-size: 18pt;
+	list-style-type: none;
+	}
+
+#people {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: auto;
+	margin-left: 1em;
+
+}
+
+#people img{
+	border: 1px solid #000;
+	height: 300px;
+}
+
+#people p {
+	text-align: center;
+}
+#people h1{
+	text-size: 10pt;
+	text-align: center;
+	margin-bottom: -0.10em;
+}
+
+#people h2{
+	font-family: small "Ubuntu Mono";
+	text-size: 8pt;
+	text-align: center;
+}
+
