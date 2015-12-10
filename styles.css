@@ -6,7 +6,7 @@
  * grey  = #60646D
  * tan   = #FFFFF7
  * black = #383732
- * purple = #ab75bd or #9966ff
+ * purple = #ab75bd (#e6e6f7 transparency) or #9966ff 
  *
 */
 
@@ -20,10 +20,6 @@ h1 {
 	font-size:14pt;
 }
 
-h2 {
-	font-size: 13pt;
-
-}
 
 p {
 	font-size: 10pt;
@@ -38,19 +34,51 @@ a:hover {
 	color: #383732;
 	text-decoration: none;
 }
+
 li {
 	margin: 0px;
 }
+
+/* Table styling */
+table {
+	width: 95%;
+	font-size: 10pt;
+	margin: auto;
+	border-collapse: collapse;
+
+}
+
+th {
+	text-align: center;
+	background-color: #f2f2f2;
+	border-bottom: 2px solid #4b4b4b;
+	padding: 5px;
+}
+
+
+tr {
+	border-bottom: 1px solid #2b2b2b;
+
+}
+td {
+	padding: 5px 10px;
+
+}
+
 /* Page centering */ 
 
 #wrap {
-	width: 800px;
+	min-width: 475px;
+	max-width: 800px;
 	margin:  auto;
+	border: 1px solid  black;
+	border-radius: 10px;
+
 	}
 
 /* Major div styling */
 #header {
-	width: 800px;
+
 	height: auto;
 	background: #4b4b4b;
 	background-image: url("images/header_image_crop.jpg");
@@ -60,7 +88,6 @@ li {
 	color: #FFFFFF;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	border-bottom: 0px;
 	padding-bottom: 10px;
 }
 
@@ -73,10 +100,11 @@ li {
 	padding: 10px 0 0px 7.5px;
 	margin: auto;
 	overflow: hidden;
+
 }
 #header img{
-	height: 50px;
-	align: right;
+	height: 30px;
+	padding-top: 1%;
 }
 #navbar {
 	background-color: #60646D;
@@ -119,10 +147,11 @@ li {
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	border-top: 5px solid #836D6F;
+	padding: 0 0 10px 0;
 }
   
 #footer p{
-	text-size: 8pt;
+	font-size: 10pt;
 	margin: auto;
 	text-align: center;	
 	color: #383732;
@@ -144,7 +173,7 @@ li {
 	background-attachment: center;
 	background-color: #FFFFFF;
 	padding: 10px 0 10px 0;
-	width: 800px;
+
 }
 
 #content p{
@@ -155,7 +184,7 @@ li {
 }
 
 #content h1{
-	font: "Open Sans", Arial, sans-serif;
+	/*font: "Open Sans", Arial, sans-serif; */
 	padding: 0 0 0 7.5px;
 }
 
@@ -164,18 +193,28 @@ li {
 	color: #60646D;
 }
 #content hr{
+	height: 0.1em;
+	background-color: #ab75bd;
 	margin: -10px 20px -5px 7.5px;
 	padding: -2px 7.5px;
 	border: 1px solid #ab75bd;
 }
 
-#content li{
+
+#file-links {
+	font: "Lucida Sans", Arial, sans-serif;
+}
+
+#file-links a{
+	font-weight: bold;
+}
+#file-links li{
 	padding: 0.75em 0 0 1.5em;
-	text-size: 18pt;
+	text-size: 12pt;
 	list-style-type: none;
 	}
 
-#people {
+#im {
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -184,22 +223,23 @@ li {
 
 }
 
-#people img{
+#im img{
 	border: 1px solid #000;
 	height: 300px;
 }
 
-#people p {
+#im p {
+	font-family: small "Courier", Arial, sans-serif;
 	text-align: center;
 }
-#people h1{
-	text-size: 10pt;
+#im h1{
+	font-size: 12pt;
 	text-align: center;
 	margin-bottom: -0.10em;
 }
 
-#people h2{
-	font-family: small "Ubuntu Mono";
+#im h2{
+	font-family: "Courier", Arial, sans-serif;
 	text-size: 8pt;
 	text-align: center;
 }
