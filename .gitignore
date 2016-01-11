@@ -35,3 +35,7 @@
 
 #Notebook garbage. 
 *.ipynb_checkpoints
+
+#Ignore data directories.
+data/
+in_class_code/
