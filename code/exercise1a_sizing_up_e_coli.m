@@ -73,7 +73,7 @@ imshow(grat_im);
 imshow(grat_im, []);
 
 %Much better. This image shows a graticule -- a microscopic ruler. Each
-%major division on this image is 10µm apart. If we consider this image as
+%major division on this image is 10 microns apart. If we consider this image as
 %an array, we see that if we were to go across a given row of the image,
 %there would be a periodic oscillation in pixel values. Dark values would
 %correspond to the ticks in the graticules while the white spaces would
