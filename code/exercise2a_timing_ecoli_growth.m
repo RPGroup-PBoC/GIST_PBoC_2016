@@ -31,7 +31,7 @@ threshold = 0.4;
 im_thresh = im_norm < 0.4;
 
 %We can see two humps -- We'll say anything above 0.3 is a bacterium. 
-threshed_im = im_norm < 0.4;
+threshed_im = im_norm < 0.3;
 imshow(im_thresh);
 
 %Cool! All of the bacteria are white (1's) and the background is black 
