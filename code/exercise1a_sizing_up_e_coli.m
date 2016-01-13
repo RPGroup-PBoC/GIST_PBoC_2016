@@ -139,7 +139,7 @@ copy_im = cell_im; %Copy the image
 copy_im(900:920, 20:20 + round(scale_bar_length)) = 0;
 
 %Show the image
-imshow(scale_image, [])
+imshow(copy_im, [])
 
 %And let's save it for fun!
 saveas(gcf, 'Ecoli_with_scalebar.tif'); %gcf = get current figure.
