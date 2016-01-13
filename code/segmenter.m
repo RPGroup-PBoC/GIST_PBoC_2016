@@ -1,42 +1,62 @@
-function seg_mask = segmenter(filename, radius, threshold)
+%The following code is an example of a matlab functions. Unlike most other
+%programming languages, matlab functions must exist in their own file free
+%from all other code. The file will always start with the word function and
+%is then followed by the name of the variable the function will return. In
+%this case, it is 'seg_mask'. The next name ('segmenter') is the actual
+%name of the function we will call. Followed are the various arguments we
+%can pass to it sandwiched inbetween parenthesis.
+function seg_mask = segmenter(filename, radius, threshold, small_area, big_area)
+%This function segments an image and returns the segmentation mask.
+%
+%
+%Parameters:
+%------------
+% filename : string
+%   Name of the image file to be segmented. 
+% radius : float 
+%   Radius to use during the gaussian blur smoothing. 
+% threshold : float
+%   Threshold below which cells will be selected.
+% small_area: int
+%   Lower bound of area filter. 
+% big_area : int
+%   Upper bound of area filter. 
 
 %Load the image. 
-im = imread(filename);
-
-%Normalize the image. 
-im_norm = mat2gray(im);
-
-%Blur it. 
+im_phase = imread(filename);
+    
+%Normalize it!
+im_norm = mat2gray(im_phase);
+    
+%Blur with a 50 pixel radius and subtract. 
 im_blur = imgaussfilt(im_norm, radius);
-
-%Subtract them. 
 im_sub = im_norm - im_blur;
-
-%Rescale the intensities. 
-im_sub = mat2gray(im_sub);
-
-%Apply the threshold. 
+im_sub = mat2gray(im_sub); %Renormalization
+    
+%Apply a threshold. 
 im_thresh = im_sub < threshold;
-
-%Label the image. 
-im_lab = bwlabel(im_thresh);
-
-%Get the region properties.
-props = regionprops(im_lab, 'Area');
+    
+%Label our image.
+im_label = bwlabel(im_thresh);
+    
+%Extract the region properties of our image. 
+props = regionprops(im_label, 'Area');
 areas = [props.Area];
-
-%Apply the area filter. 
-approved_cells = find((areas > 200) & (areas < 800));
-
-%Make the new image. 
-im_approved = zeros(size(im_lab));
+    
+%Find the cells which meet our area requirement. The 'find' command will
+%return the indices at of the areas vector which meet our filtering
+%requirement. 
+approved_cells = find((areas > small_area) & (areas < big_area));
+    
+%Add the approved cells. We will do this by generating an image of zeros
+%and adding the binary image of 
+final_image = zeros(size(im_label)); %Generates an empty image.
 for i=1:length(approved_cells)
-    good_cell = (im_lab==approved_cells(i));
-    im_approved = im_approved + good_cell;
+    final_image = final_image + (im_label==approved_cells(i)); %Adds them
 end
 
-%Label it. 
-seg_mask = bwlabel(im_approved);
+%Label our final image.
+seg_mask = bwlabel(final_image);
+    
 end
-
     
