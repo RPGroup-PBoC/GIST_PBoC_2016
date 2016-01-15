@@ -40,14 +40,14 @@ imshow(im_norm, []);
 
 %Now the uneven illumination is very obvious. 
 %Now we can subtract the two to see how it improved. 
-bg_subtract = im_phase - im_blur;
+bg_subtract = im_norm - im_blur;
 imshow(bg_subtract);
 
 %That looks pretty gross. That is because the subtraction yields in
 %negative values. Let's rescale the entire image to values ranging from 0
 %to 1. 
 im_norm = mat2gray(bg_subtract);
-imshow(bg_subtract, [])
+imshow(im_norm, [])
 
 %Beautiful! The unevel illumination is now totally gone! Now let's try
 %thresholding our image as we did yesterday. From the histogram we
@@ -65,7 +65,7 @@ imshow(im_thresh);
 %we must first be able to isolate each one. We can do this with a simple
 %matlab command called "bwlabel" which will identify each individual object
 %in an image. 
-im_labeled = bwlabel(bg_subtract);
+im_labeled = bwlabel(im_thresh);
 
 %Let's look at the objects found through the labeling. We'll depict the
 %objects as a rainbow color that corresponds to their index number. 
