@@ -35,7 +35,9 @@ im_sub = mat2gray(im_sub); %Renormalization
     
 %Apply a threshold. 
 im_thresh = im_sub < threshold;
-    
+ 
+%Remove cells touching border. 
+im_thresh = imclearborder(im_thresh);
 %Label our image.
 im_label = bwlabel(im_thresh);
     
