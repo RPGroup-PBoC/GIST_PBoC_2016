@@ -4,6 +4,9 @@
 %given by -(1/2) * K * x^2 . Note that this 'spring' force is in balance
 %with the stokes drag for a bead of radius a (6 pi eta a delta x/ delta t).
 
+%see also 'J.F. Beausang et al. Elementary simulation of tethered Brownian motion. American Journal of Physics 75 (6), p.
+520-523' for additional details on this.
+
 %Run3 -> lets look at one simulation of the bead in a potential well.
 
 close all
